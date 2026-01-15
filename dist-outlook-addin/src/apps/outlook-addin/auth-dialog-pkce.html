@@ -106,6 +106,16 @@
           TOKEN_ENDPOINT: 'https://candle-448049808205-us-east-1.auth.us-east-1.amazoncognito.com/oauth2/token',
           USERINFO_ENDPOINT: 'https://candle-448049808205-us-east-1.auth.us-east-1.amazoncognito.com/oauth2/userInfo'
         };
+      } else if (path.includes('FileServer_Demo')) {
+        // Demo environment (GitHub Pages)
+        return {
+          environment: 'demo',
+          COGNITO_DOMAIN: 'https://candle-482624378498-us-east-1.auth.us-east-1.amazoncognito.com',
+          CLIENT_ID: '580d2bi0qbpije4b55vflcsehg',
+          REDIRECT_URI: 'https://candle-ai.github.io/FileServer_Demo/dist-outlook-addin/src/apps/outlook-addin/auth-dialog-pkce.html?callback=true',
+          TOKEN_ENDPOINT: 'https://candle-482624378498-us-east-1.auth.us-east-1.amazoncognito.com/oauth2/token',
+          USERINFO_ENDPOINT: 'https://candle-482624378498-us-east-1.auth.us-east-1.amazoncognito.com/oauth2/userInfo'
+        };
       } else {
         // Dev environment (GitHub Pages)
         return {
